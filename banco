@@ -1,0 +1,39 @@
+#include "cuenta.h"
+ 
+class Banco {
+private:
+    Cuenta cuentas[2];
+ 
+public:
+    Banco() {
+        cuentas[0] = Cuenta(12345, 1111, 1000.0);
+        cuentas[1] = Cuenta(67890, 2222, 500.0);
+    }
+ 
+    Cuenta* obtenerCuenta(int numeroCuenta) {
+        for (int i = 0; i < 2; i++) {
+            if (cuentas[i].obtenerNumeroCuenta() == numeroCuenta) {
+                return &cuentas[i];
+            }
+        }
+        return nullptr;
+    }
+};
+ 
+class CajeroAutomatico {
+private:
+    Banco& banco;
+    Cuenta* cuentaActual;
+ 
+public:
+    CajeroAutomatico(Banco& banco) : banco(banco), cuentaActual(nullptr) {}
+ 
+    bool autenticar(int numeroCuenta, int pin) {
+        Cuenta* cuenta = banco.obtenerCuenta(numeroCuenta);
+        if (cuenta && cuenta->verificarPin(pin)) {
+            cuentaActual = cuenta;
+            return true;
+        }
+        return false;
+    }
+};
