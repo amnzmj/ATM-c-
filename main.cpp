@@ -1,5 +1,5 @@
 /**
- * @version 1.0
+ * @version 1.1
  * @date 21/01/2025
  * @autor "EQUIPO ADDJ"
  * @name CajeroATM
