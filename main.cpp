@@ -1,5 +1,5 @@
 /**
- * @version 1.1
+ * @version 1.2
  * @date 21/01/2025
  * @autor "EQUIPO ADDJ"
  * @name CajeroATM
@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//---------------------------------------- ALEX Y DANI
+
 class Cuenta {
 private:
     int numeroCuenta;
@@ -47,7 +47,7 @@ public:
     }
 };
 
-//-------------------------------------------------------- DIEGO
+
 class Banco {
 private:
     Cuenta cuentas[2];
@@ -89,7 +89,6 @@ public:
     }
 
 
-    //------------------------------------------------------ JAIR
     void mostrarMenu() {
         if (!cuentaActual) {
             cout << "Debe autenticarse primero." << endl;
@@ -135,7 +134,7 @@ public:
 };
 
 
-//----------------------------------------------------- DANI
+
 int main() {
     Banco banco;
     CajeroAutomatico cajero(banco);
