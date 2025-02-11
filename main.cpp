@@ -54,8 +54,11 @@ private:
 
 public:
     Banco() {
-        cuentas[0] = Cuenta(12345, 1111, 1000.0);
-        cuentas[1] = Cuenta(67890, 2222, 500.0);
+       cuentas[0] = Cuenta(1111, 1234, 100.0);
+        cuentas[1] = Cuenta(2222, 5678, 200.0);
+        cuentas[2] = Cuenta(3333, 4321, 300.0);
+        cuentas[3] = Cuenta(4444, 8765, 400.0);
+        cuentas[4] = Cuenta(5555, 9876, 500.0);
     }
 
     Cuenta* obtenerCuenta(int numeroCuenta) {
